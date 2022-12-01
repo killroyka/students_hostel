@@ -1,0 +1,7 @@
+/actions/migrations/
+/users/migrations/
+/students_hostel/migrations/
+/venv/
+/.env
+/db.sqlite3
+/.idea/
