@@ -10,7 +10,7 @@ class User(AbstractUser):
     room = models.IntegerField("Номер комнаты", null=True, blank=True)
     HOSTELS = [
         (1, "Первое общежитие"),
-        (2, "Второе общежитиеddddd"),
+        (2, "Второе общежитие"),
         (3, "Третье общежитие"),
         (4, "Четвертое общежитие"),
     ]
