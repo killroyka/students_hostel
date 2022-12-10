@@ -3,8 +3,9 @@ from django.db import models
 
 
 class Action(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="action")
-    description = models.TextField(max_length=500)
+    title = models.CharField("Заголовок", max_length=60, null=True, blank=True)
+    user = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="action",verbose_name="Пользователь")
+    description = models.TextField("Описание", max_length=500)
 
     class Meta:
         verbose_name = "Активность"
@@ -13,6 +14,7 @@ class Action(models.Model):
 
 class ActionImage(models.Model):
     action = models.ForeignKey(Action, on_delete=models.CASCADE, related_name="images")
+    title = models.CharField("Заголовок картинки", max_length=60, null=True, blank=True)
     image = models.ImageField()
 
     class Meta:

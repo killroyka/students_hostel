@@ -2,6 +2,6 @@
 /users/migrations/
 /students_hostel/migrations/
 /venv/
-/.env
+/.env/
 /db.sqlite3
 /.idea/

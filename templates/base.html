@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Заголовок {% endblock %}</title>
+</head>
+<body>
+{% include "includes/header.html" %}
+<main>
+    {% block content %} Контентище {% endblock %}
+</main>
+{% include "includes/footer.html" %}
+
+
+</body>
+</html>

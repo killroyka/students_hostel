@@ -8,7 +8,13 @@ class User(AbstractUser):
     last_name = models.CharField("Фамилия", max_length=150, blank=True)
     username = models.CharField(max_length=100, null=True, blank=True, unique=True)
     room = models.IntegerField("Номер комнаты", null=True, blank=True)
-    hostel_number = models.IntegerField("Номер общежития", null=True, blank=True)
+    HOSTELS = [
+        (1, "Первое общежитие"),
+        (2, "Второе общежитие"),
+        (3, "Третье общежитие"),
+        (4, "Четвертое общежитие"),
+    ]
+    hostel_number = models.IntegerField("Номер общежития", null=True, blank=True, choices=HOSTELS, default=True)
     contract_number = models.IntegerField("Номер договора", null=True, blank=True)
     email = models.EmailField("Почта", blank=True, validators=[EmailValidator])
     phone_number = models.IntegerField("Номер телефона", null=True, blank=True)
@@ -16,3 +22,6 @@ class User(AbstractUser):
     administrative_points = models.IntegerField("количество административных баллов", null=True, blank=True)
     is_verificated = models.BooleanField("Подвтержден ли пользователь", default=False,
                                          help_text="Подтвержден ли пользователь старостой этажа")
+    class Meta:
+        verbose_name = "Пользователь"
+        verbose_name_plural = "Пользователи"

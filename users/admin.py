@@ -7,7 +7,6 @@ from .models import User
 class ActivitiesInline(admin.TabularInline):
     model = Action
 
-
 @admin.register(User)
 class UserManager(admin.ModelAdmin):
     fieldsets = (
