@@ -29,13 +29,22 @@
                 </li>
             </ul>
         </div>
-            <div class="logo">
-                <a class="navbar-brand" href="#">
-                    <img src="{% static 'img/logo.jpg' %}" alt="" height="92">
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/logo.jpg' %}" alt="" height="92">
+            </a>
+        </div>
+        <div class="d-flex">
+            {% if user.is_authenticated %}
+
+            {% else %}
+                <a href="{% url 'signup' %}">
+                    <button class="btn register-btn">Регистрация</button>
                 </a>
-            </div>
-            <div>
-                <button class="btn register-btn">Регистрация</button>
-            </div>
+                <a href="{% url 'login' %}">
+                    <button class="btn register-btn">Вход</button>
+                </a>
+            {% endif %}
+        </div>
     </div>
 </nav>

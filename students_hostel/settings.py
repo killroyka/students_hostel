@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'bootstrap5',
     'debug_toolbar',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -104,3 +105,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'Images/')
 MEDIA_URL = 'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.User'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Login
+LOGIN_URL = '/auth/login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/auth/login/'
+# \Login

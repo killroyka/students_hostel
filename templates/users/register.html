@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% include 'includes/register_form.html' with message='Вход' %}
+    </div>
+{% endblock %}

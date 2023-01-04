@@ -36,6 +36,7 @@
     border: 1px solid #414141;
     border-radius: 0;
     padding: 15px 25px;
+    margin-left: 10px;
 }
 
 .learn-more {
@@ -70,4 +71,7 @@ a {
     font-weight: 500;
     font-size: 100px;
     line-height: 110px;
+}
+.form-group{
+    padding: 0px 10px;
 }
